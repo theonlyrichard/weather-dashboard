@@ -1,92 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Link to css  -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-
-
-    <div class="container">
-        <!-- Beginning of jumbotron  -->
-        <div class=" jumbotron-fluid bg-dark text-white text-center">
-            <div class="container">
-                <h1 class="display-4 ">Weather Dashboard</h1>
-            </div>
-        </div>
-        <!-- Beginning of row 1 -->
+    <header class="bg-dark text-white text-center p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main class="container-fluid">
         <div class="row">
-            <!-- Beginning of col 1 in rwo 1 -->
-            <div class="col-3 m-2 bg-light">
-                <h3>Search for a City:</h3>
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="city-input" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button id="add-city" class="btn btn-outline-secondary bg-primary" type="button">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    </div>
-                </div>
-                <!-- Beginning of history cities box -->
-                <div class="card" style="width: 15rem;">
-                    <ul id="city-list" class="list-group list-group-flush">
-                        <!-- <li class="list-group-item"></li> -->
-                    </ul>
-                </div>
+            <div class="col-12 col-md-3 p-2 search-column">
+                <form class="border p-2" id="city-search-form">
+                    <h4>Search for a City</h2>
+                        <input id="city" type="text" autofocus="true" class="form-input" />
+                        <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <div class="past-search border" id="past-search-buttons"></div>
             </div>
-            <!-- Beginning of col 2 in rwo 1 -->
-            <div class="col-8 m-2">
-                <!-- Beginning of row 1 in col 2 -->
-                <div class="row-12">
-                    <div class="card">
-                        <div id="today-weather" class="card-body">
-                            <!-- <h3>City:</h3>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p> -->
-                        </div>
+            <div class="col-12 col-md-9">
+                <div class="row border selected-city" id="current-forecast">
+                    <div class="col-12">
+                        <h2 id="searched-city"></h2>
+                        <div id="current-weather-container" class="list-group"></div>
                     </div>
                 </div>
-                <!-- Beginning of row 2 in col 2 -->
-                <br>
-                <div class="row-12">
-                    <h3>5-Day Forecast:</h3>
-                </div>
-                <!-- Beginning of row 3 in col 2 -->
-                <br>
-                <div id="boxes" class="row">
-
+                <div class="row border" id="five-day-forecast">
+                    <h2 class="col-12" id="forecast"></h2>
+                    <div class="d-flex" id="fiveday-container"></div>
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="./assets/main.js"></script>
 </body>
 
