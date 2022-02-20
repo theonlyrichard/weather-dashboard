@@ -1,22 +1,31 @@
+font-family: 'Bebas Neue', cursive;
+font-family: 'Oswald', sans-serif;
 
-ion-icon {
-    color:whitesmoke;
-    --ionicon-stroke-width: 80px;
-  }
-
-.green{
-  background-color: green;
+search-column{
+  background-color:	url(./images/weather.jpeg)
 }
-.yellow{
+
+.list-group-item{
+  line-height: 0.5;
+  border: none;
+}
+.card-body{
+  flex:auto
+}
+
+span.severe{
+  padding: 3px;
+  background-color: red;
+  color:white;
+}
+
+span.moderate{
+  padding: 3px;
   background-color: yellow;
 }
-.orange{
-  background-color: orange;
-}
-.red{
-  background-color: red;
-}
 
-.purple{
-  background-color: purple;
+span.favorable{
+  padding: 3px;
+  background-color: green;
+  color:white;
 }
