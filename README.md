@@ -17,5 +17,4 @@ The 5-days weather forecast also displays below the current weather conditions s
 - Temperature
 - Humidity
 
-The local storage is used here to store the previous search city and display them to the user in the left side of the page under the list group. The user can also clear the search history by clicking the clear history button.
-If the user wants to see the past search city weather condition again, just click the list group item cities under the clear history button.<img width="1680" alt="Screen Shot 2022-01-10 at 9 51 14 PM" src="https://user-images.githubusercontent.com/93751925/148888751-ae13d598-3d3a-47f2-901b-68d5b735541b.png">
+Screen Shot 2022-01-10 at 9 51 14 PM" src="https://user-images.githubusercontent.com/93751925/148888751-ae13d598-3d3a-47f2-901b-68d5b735541b.png">
